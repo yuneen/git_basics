@@ -2,7 +2,7 @@
 mkdir mono  
 cd mono/  
 git init  
-> README.md  
+    > README.md  
 git status  
 git add README.md  
 git status  
