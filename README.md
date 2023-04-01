@@ -1,0 +1,9 @@
+mkdir mono  
+cd mono/  
+git init  
+> README.md  
+git status  
+git add README.md  
+git status  
+git commit -m "Adding file: README.md"  
+
