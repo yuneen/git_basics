@@ -28,7 +28,7 @@ git checkout main
 git status  
 git add README.md  
 git status  
-git commit -m "README.md changd:added 2nd subtasks"  
+git commit -m "README.md changed:added 2nd subtasks"  
 git log  
 
 
