@@ -16,4 +16,19 @@ git init
 
 Merge done!
 
+git branch first_branch  
+git branch  
+git checkout first_branch  
+git branch  
+git status  
+git add README.md  
+git status  
+git commit -m "README.md changed:added 1st subtask"  
+git checkout main  
+git status  
+git add README.md  
+git status  
+git commit -m "README.md changd:added 2nd subtasks"  
+git log  
+
 
