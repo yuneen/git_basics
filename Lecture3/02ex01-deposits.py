@@ -27,10 +27,6 @@ TOTAL = SUM * ((1 + p) ** (SET_PERIOD / FIXED_PERIOD))
 """
 
 
-# TODO: add lines to calculate yields for some common periods
-#       of time (e.g. 1 month, 1 year, 5 years, 10 years)
-# TODO: change the script to output the 1-year percent yield
-#       as well
 # TODO: (extra) Output only percents if the initial SUM is
 #       not known at the moment the script is run
 
@@ -45,11 +41,19 @@ USAGE = USAGE.strip()
 def deposit(initial_sum, percent, fixed_period, set_period):
     """Calculate deposit yield."""
     per = percent / 100
-    growth = (1 + per) ** (set_period / fixed_period)
-    return initial_sum * growth
+    growth = round((1 + per) ** (set_period / fixed_period), 2)
+    growth_m = round((1 + per) ** (30 / fixed_period), 2)
+    growth_y = round((1 + per) ** (365 / fixed_period), 2)
+    growth_5 = round((1 + per) ** (1826 / fixed_period), 2)
+    growth_10 = round((1 + per) ** (3652 / fixed_period), 2)
+    year_per = round((growth_y - 1)* 100, 2)
+
+    return initial_sum * growth, initial_sum * growth_m, initial_sum * growth_y, initial_sum * growth_5, initial_sum * growth_10, year_per
+    
 
 
 def main(args):
+
     """Gets called when run as a script."""
     if len(args) != 4 + 1:
         exit(USAGE.format(script=args[0]))
